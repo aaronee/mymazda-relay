@@ -75,7 +75,7 @@ async def startEngine() -> None:
   client = pymazda.Client(username, password, region)
   await client.start_engine(vid)
   await client.close()
-  return "Success"
+  return "Engine started"
 
 @app.post("/stopEngine")
 async def stopEngine() -> None:
@@ -87,7 +87,7 @@ async def stopEngine() -> None:
   client = pymazda.Client(username, password, region)
   await client.stop_engine(vid)
   await client.close()
-  return "Success"
+  return "Engine stopped"
 
 @app.post("/lockDoors")
 async def lockDoors() -> None:
@@ -99,7 +99,7 @@ async def lockDoors() -> None:
   client = pymazda.Client(username, password, region)
   await client.lock_doors(vid)
   await client.close()
-  return "Success"
+  return "Doors locked"
 
 @app.post("/unlockDoors")
 async def unlockDoors() -> None:
@@ -111,7 +111,7 @@ async def unlockDoors() -> None:
   client = pymazda.Client(username, password, region)
   await client.unlock_doors(vid)
   await client.close()
-  return "Success"
+  return "Doors unlocked"
 
 @app.post("/hazardLightsOn")
 async def turn_on_hazard_lights() -> None:
@@ -123,7 +123,7 @@ async def turn_on_hazard_lights() -> None:
   client = pymazda.Client(username, password, region)
   await client.turn_on_hazard_lights(vid)
   await client.close()
-  return "Success"
+  return "Hazard lights on"
 
 @app.post("/hazardLightsOff")
 async def turn_off_hazard_lights() -> None:
@@ -135,7 +135,7 @@ async def turn_off_hazard_lights() -> None:
   client = pymazda.Client(username, password, region)
   await client.turn_off_hazard_lights(vid)
   await client.close()
-  return "Success"
+  return "Hazard lights off"
 
 @app.post("/sendPOI")
 async def sendPOI() -> None:
