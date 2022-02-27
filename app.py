@@ -178,6 +178,10 @@ async def sendPOIfromURL() -> None:
   await client.close()
   return "Success"
 
+@app.post("/testPage")
+async def testPage() -> None:
+  return "Aaron"
+
 def get_google_coordinates(full_gmap_url):
   match = re.findall('place\/(.*?),(.*?)\/', full_gmap_url)
   return float(match[0][0]), float(match[0][1]), "Coordinate from Google Maps"
